@@ -13,6 +13,7 @@ Definition Class Magasin
 
 int Magasin::compteurInstance = 0;
 Magasin* Magasin::ptr = NULL;
+int Magasin::identifiant = 0;
 
 
 
@@ -52,8 +53,10 @@ Magasin::Magasin()
 
 //insertion produit manuellement
 void Magasin::insertProduit(Produit *produit)
-{
+{    
+    produit->setId(Magasin::identifiant);
 	listeProduits.push_back(*produit);
+    Magasin::identifiant++;
 }
 
 void Magasin::recupererProduitExterne()
@@ -115,7 +118,9 @@ void Magasin::recupererProduitExterne()
     {
         Produit* produit = new Produit(noms[i], prix[i]);
 
+
         insertProduit(produit);
+        
 
     }
 

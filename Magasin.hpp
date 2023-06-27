@@ -20,6 +20,7 @@ public:
 private:
 	static int compteurInstance;
 	static Magasin* ptr;
+	static int identifiant;
 	std::vector<Produit> listeProduits;
 
 	Magasin();
