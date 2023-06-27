@@ -6,7 +6,7 @@ Classe produit
 
 
 #include <iostream>
-#include "produit.hpp"
+#include "Produit.hpp"
 
 
 

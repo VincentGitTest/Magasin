@@ -11,7 +11,8 @@ Fonction main
 #include <vector>
 
 #include "Magasin.hpp"
-
+#include "Produit.hpp"
+#include "Personne.hpp"
 
 
 

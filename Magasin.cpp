@@ -1,12 +1,16 @@
+/*Auteur: Malika
+Definition Class Magasin
+*/
 #include <iostream>
 #include <vector>
 #include "Magasin.hpp"
-#include "Produit.cpp"
+#include "Produit.hpp"
+
 
 
 
 int Magasin::compteurInstance = 0;
-Magasin* Magasin::_ptr = NULL;
+Magasin* Magasin::ptr = NULL;
 
 
 
@@ -14,7 +18,7 @@ void Magasin::constructeurMagasin()
 {
 	if (compteurInstance == 0)
 	{
-		_ptr = new Magasin;
+		ptr = new Magasin;
 		compteurInstance++;
 		std::cout << "Magasin cree !" << std::endl;
 	}
@@ -28,7 +32,7 @@ Magasin* Magasin::getMagasin()
 {
 	if (compteurInstance == 1)
 	{
-		return _ptr;
+		return ptr;
 	}
 	return NULL;
 
@@ -41,7 +45,11 @@ Magasin::~Magasin()
 
 Magasin::Magasin()
 {
+
 };
 
-
+void Magasin::insertProduit(Produit *produit)
+{
+	listeProduits.push_back(*produit);
+}
 
