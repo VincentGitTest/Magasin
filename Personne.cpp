@@ -7,35 +7,76 @@ Classe Personne
 
 #include <iostream>
 #include <vector>
-#include "Produit.cpp"
+#include "Produit.hpp"
+#include "Personne.hpp"
 
 
 
 
-class Personne
+Personne::Personne(std::string _nom, double _argent)
 {
-protected:
-	std::string nom;
-	double argent;
-	std::vector<Produit> listeProduitPossede;
+	nom = _nom;
+	argent = _argent;
+	listeProduitPossede;
+}
 
-public:
-	Personne(std::string _nom, double _argent)
+
+Personne::~Personne()
+{
+
+}
+
+
+void Personne::acheterProduit(Produit* produit)
+{
+	double prixProduit = produit->getPrix();
+	if (argent - prixProduit > 0)
 	{
-		nom = _nom;
-		argent = _argent;
+		ajouterProduit(produit);
+		enleverArgent(prixProduit);
 	}
 
 
-	~Personne()
+	else
 	{
+		std::cout << "Impossibilite d'acheter, il vous manque " << prixProduit - argent << " pour acheter le produit" << std::endl;
+	}
+}
 
+
+void Personne::setArgent(double _argent)
+{
+	argent = _argent;
+}
+
+double Personne::getArgent()
+{
+	return argent;
+}
+
+void Personne::enleverArgent(double enlever)
+{
+	argent -= enlever;
+}
+
+void Personne::ajouterArgent(double ajouter)
+{
+	argent += ajouter;
+}
+
+void Personne::ajouterProduit(Produit* produit)
+{
+	listeProduitPossede.push_back(produit);
+}
+
+void Personne::afficherPanier()
+{
+
+	for (int i = 0; i < listeProduitPossede.size(); i++)
+	{
+		std::cout << listeProduitPossede[i]->getNom() << std::endl;
 	}
 
+}
 
 
-
-
-
-
-};
