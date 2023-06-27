@@ -15,6 +15,7 @@ public:
 	static Magasin* getMagasin();
 	~Magasin();
 	void insertProduit(Produit* produit);
+	void recupererProduitExterne();
 
 private:
 	static int compteurInstance;
