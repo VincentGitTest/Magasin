@@ -79,4 +79,9 @@ void Personne::afficherPanier()
 
 }
 
+std::string Personne::getNom()
+{
+	return nom;
+}
+
 
