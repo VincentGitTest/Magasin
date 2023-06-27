@@ -14,6 +14,7 @@ Produit::Produit(std::string _nom, double _prix)
 {
 	nom = _nom;
 	prix = _prix;
+	int id = NULL;
 }
 
 
@@ -32,4 +33,13 @@ std::string Produit::getNom()
 	return nom;
 }
 
+int Produit::getId()
+{
+	return id;
+}
+
+void Produit::setId(int newId)
+{
+	Produit::id = newId;
+}
 
