@@ -9,6 +9,7 @@ Fonction main
 
 
 
+
 #include <fstream>
 #include <vector>
 #include <sstream>
@@ -95,19 +96,24 @@ void menu(Personne* personne)
 	{
 		std::cin >> command;
 
-		try 
-		{
 
-		}
-		catch () 
-		{
-		}
 
 
 	}
 
 
 }
+
+#include <iostream>
+#include <vector>
+
+#include "Magasin.hpp"
+#include "Produit.hpp"
+#include "Personne.hpp"
+
+
+
+
 
 int main()
 {
@@ -137,6 +143,8 @@ int main()
 
 
 
+    Magasin::constructeurMagasin();
+    delete Magasin::getMagasin();
     return 0;
 }
 
