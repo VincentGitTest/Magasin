@@ -6,33 +6,30 @@ Classe produit
 
 
 #include <iostream>
+#include "produit.hpp"
 
 
 
-class Produit
+Produit::Produit(std::string _nom, double _prix)
 {
-protected:
-	std::string nom;
-	double prix;
-	int quantite;
-
-public:
-	Produit(std::string _nom, double _prix)
-	{
-		nom = _nom;
-		prix = _prix;
-	}
+	nom = _nom;
+	prix = _prix;
+}
 
 
-	~Produit()
-	{
+Produit::~Produit()
+{
 
-	}
+}
+
+double Produit::getPrix()
+{
+	return prix;
+}
+
+std::string Produit::getNom()
+{
+	return nom;
+}
 
 
-
-
-
-
-
-};
