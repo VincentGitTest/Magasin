@@ -1,0 +1,5 @@
+﻿  Magasin.cpp
+C:\Users\POEI\source\repos\Magasin\Magasin\Magasin.cpp(118,18): error C2352: « Magasin::insertProduit » : un appel d’une fonction membre non statique nécessite un objet
+C:\Users\POEI\source\repos\Magasin\Magasin\Magasin.cpp(54,15): message : voir la déclaration de 'Magasin::insertProduit'
+  main.cpp
+  Génération de code en cours...

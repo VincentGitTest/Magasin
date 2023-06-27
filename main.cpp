@@ -104,13 +104,6 @@ void menu(Personne* personne)
 
 }
 
-#include <iostream>
-#include <vector>
-
-#include "Magasin.hpp"
-#include "Produit.hpp"
-#include "Personne.hpp"
-
 
 
 
@@ -140,11 +133,6 @@ int main()
 
     delete(personne);
 
-
-
-
-    Magasin::constructeurMagasin();
-    delete Magasin::getMagasin();
     return 0;
 }
 
