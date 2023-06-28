@@ -44,7 +44,7 @@ int main()
 
 
 
-
+//delete products and magasin
     delete(personne);
 
     return 0;
