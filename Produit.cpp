@@ -40,12 +40,6 @@ int Produit::getId()
 
 void Produit::setId(int newId)
 {
-<<<<<<< HEAD
-	Produit::id= newId;
-}
-
-=======
 	Produit::id = newId;
 }
->>>>>>> main
 
