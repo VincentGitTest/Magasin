@@ -14,7 +14,7 @@ Produit::Produit(std::string _nom, double _prix)
 {
 	nom = _nom;
 	prix = _prix;
-	int id = NULL ;
+	int id = NULL;
 }
 
 
@@ -40,7 +40,12 @@ int Produit::getId()
 
 void Produit::setId(int newId)
 {
+<<<<<<< HEAD
 	Produit::id= newId;
 }
 
+=======
+	Produit::id = newId;
+}
+>>>>>>> main
 

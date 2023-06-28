@@ -34,6 +34,7 @@ void Personne::acheterProduit(Produit* produit)
 	{
 		ajouterProduit(produit);
 		enleverArgent(prixProduit);
+		std::cout << "Vous avez achete : " << produit->getNom() << " et il vous reste " << getArgent() << std::endl;
 	}
 
 

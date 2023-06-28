@@ -19,25 +19,24 @@ int Magasin::identifiant = 0;
 
 void Magasin::constructeurMagasin()
 {
-	if (compteurInstance == 0)
-	{
-		ptr = new Magasin;
-		compteurInstance++;
-		std::cout << "Magasin cree !" << std::endl;
-	}
-	else
-	{
-		std::cout << "Erreur fatale : tentative d'instancier un magasin deja existant ! \n";
-	}
+    if (compteurInstance == 0)
+    {
+        ptr = new Magasin;
+        compteurInstance++;
+    }
+    else
+    {
+        std::cout << "Erreur fatale : tentative d'instancier un magasin deja existant ! \n";
+    }
 }
 
 Magasin* Magasin::getMagasin()
 {
-	if (compteurInstance == 1)
-	{
-		return ptr;
-	}
-	return NULL;
+    if (compteurInstance == 1)
+    {
+        return ptr;
+    }
+    return NULL;
 
 };
 //destructeur Magasin
@@ -52,12 +51,22 @@ Magasin::Magasin()
 };
 
 //insertion produit manuellement
-void Magasin::insertProduit(Produit *produit)
-{    
+void Magasin::insertProduit(Produit* produit)
+{
     produit->setId(Magasin::identifiant);
-	listeProduits.push_back(*produit);
+    listeProduits.push_back(produit);
     Magasin::identifiant++;
 }
+
+
+std::vector<Produit*> Magasin::recupererListeProduit()
+{
+    return listeProduits;
+
+
+
+}
+
 
 void Magasin::recupererProduitExterne()
 {
@@ -121,6 +130,7 @@ void Magasin::recupererProduitExterne()
 
         insertProduit(produit);
         
+
 
     }
 

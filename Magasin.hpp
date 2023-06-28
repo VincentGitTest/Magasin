@@ -16,13 +16,15 @@ public:
 	~Magasin();
 	void insertProduit(Produit* produit);
 	void recupererProduitExterne();
+	std::vector<Produit*> recupererListeProduit();
 
 private:
 	static int compteurInstance;
 	static Magasin* ptr;
 	static int identifiant;
-	std::vector<Produit> listeProduits;
+
+	std::vector<Produit*> listeProduits;
+
 
 	Magasin();
 };
-
